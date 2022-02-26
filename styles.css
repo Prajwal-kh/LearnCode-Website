@@ -1,0 +1,174 @@
+/* Refractoring this code with color, font-family, text-align,etc */
+/* Use Ids very rarely or for section navigation using href */
+body{
+  text-align: center;
+  font-family: "Montserrat",sans-serif;
+}
+#title,#testimonials,#press,#cta{
+  background-color: #ff4c68;
+}
+h1,#testimonials,#cta{
+  color: #fff;
+}
+#features,#footer{
+  background-color: #fff;
+}
+#title{
+  text-align: left;
+}
+/* dont use tags like we used here use classes/ids instead to avoid common elements styling mess like header,divs,etc */
+h1,h2,h3,h4,.short-desc,#cta{
+  font-weight: bold;
+}
+.navbar{
+  padding : 0.5% 2%;
+  position: fixed;
+  width: 100%;
+  z-index: 1; /* Always use z-index above other elements otherwise they will appear on fixed bar */
+}
+.container-fluid{
+  padding: 4% 10% 0 10%;
+}
+.nav-item{
+  padding: 0 5px;
+}
+h1{
+  line-height: 1.5;
+  margin-top: 40px;
+}
+h1,.features-fas{
+  font-size: 3rem;
+}
+.btn-outline-light{
+  margin: 100px 0 80px 40px;
+}
+.btn-dark{
+  margin: 100px 0 80px 0;
+}
+.btn-outline-light,.btn-dark,h2{
+    font-family: "Ubuntu",sans-serif;
+    padding: 1% 1.5%;
+}
+.rotate-smartphone{
+  width : 80%;
+  transform: rotate(20deg);
+  position: relative;
+  left: 60px;
+  top :85px;
+  z-index: 0;
+}
+/* Now in order to make this smartphone img responsive we have to use @media query of adv css */
+@media (max-width:950px) {
+  /* max-width set to 900 to hide it behind, after 1220px img shrink size below this then it becomes tiny. */
+  .rotate-smartphone{
+    width: 60%;
+    transform: rotate(0deg);
+    position: static;
+}
+#title{
+    text-align: center;
+}
+  h1{
+    font-size: 2rem;
+  }
+}
+
+/******** Features section ************/
+.features-fas{
+  color: #ef8172;
+  padding: 7% 43%;
+}
+.features-fas:hover,button:hover{
+  color: #ff4c68;
+}
+.short-desc,.customer-suggestion{
+  line-height: 2rem;
+}
+.p-features{
+  color: #8f8f8f;
+  width: 60%;
+  margin: auto;
+}
+#features{
+  padding: 10% 5%;
+  position: relative;
+  z-index: 1;
+}
+/******** testimonials section ************/
+
+.customer-img{
+  width: 12%;
+  padding: 2% 0;
+}
+.customer-suggestion{
+  font-size: 1.4rem;
+  width: 70%;
+  margin: auto;
+}
+/**** After applying carousel to testimonial section ***/
+.carousal-item{
+  padding: 7% 15%;
+}
+
+.company-img{
+  width: 12%;
+  border-radius: 100%;
+  padding: 2.12% 0;
+}
+
+/******* press section ********/
+#press{
+  padding: 2% 4.5%;
+}
+.press-images{
+  width: 15%;
+  margin: 20px 50px;
+}
+
+/******* pricing section ********/
+#pricing,.row{
+  padding: 2% 0;
+}
+p{
+  line-height: 1.5rem;
+}
+h2{
+  font-size: 2.5rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+h4{
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/******* cta & footer section ********/
+#cta,#footer{
+  padding: 5% 10% 0% 10%;
+}
+
+#cta,.final-declaration{
+  font-family: "Montserrat-Black",serif;
+  font-size: 3.5rem;
+  padding-top: 3.5%
+}
+.ft-icons{
+  padding: 2% 1% 0;
+}
+/* Refer https://usbrandcolors.com/ to use these below colors of footer icons*/
+.fa-twitter:hover{
+  color: rgb(29 161 242);
+}
+.fa-instagram:hover{
+  color: rgb(193 53 132);
+}
+.fa-whatsapp:hover{
+  color: rgb(18 140 126);
+}
+.fa-envelope:hover{
+  color: rgb(219 68 55);
+}
+.footer-para{
+  margin-bottom: 0;
+}
